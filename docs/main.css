@@ -1,0 +1,46 @@
+@use './grid.css';
+.justify-center, .justify-end, .align-flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.align-flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar {
+  max-width: 1140px;
+  height: 90px;
+  padding: 0 1.5em;
+  margin-bottom: 50px;
+}
+
+.logo-text {
+  margin-left: 15px;
+  color: #cc9543;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5em;
+  letter-spacing: 0.1px;
+}
+/*# sourceMappingURL=main.css.map */

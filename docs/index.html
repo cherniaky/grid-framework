@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="main.css">
+    <title>The Odin Project</title>
+</head>
+<body>
+    <div class="navbar navbar-expand-md navbar-light">
+        <div class="navbar-brand">
+            <a class="logo" href="/">
+                <img alt="Odin Logo" class="logo__img"
+                    src="../assets/odin-logo.svg">
+                <div class="logo-text"> The Odin Project </div>
+            </a>
+        </div>
+    
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="modal"
+            data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false"
+            aria-label="toggle-navigation">
+            <span class="navbar-toggler-icon open"></span>
+            <span class="sr-only">Open navigation</span>
+        </button>
+    
+        <nav class="collapse navbar-collapse">
+            <!-- Full Width Navbar -->
+            <ul class="navbar-nav ml-auto hidden-md-down">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.theodinproject.com/paths/full-stack-javascript">My Path</a>
+                </li>
+    
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.theodinproject.com/paths">All Paths</a>
+                </li>
+    
+                <li class="nav-item ">
+                    <a class="nav-link" target="_blank" rel="noreferrer" href="https://discord.gg/fbFCkYabZB">Community</a>
+                </li>
+    
+                <li class="nav-link">
+                    <span class="divider">
+                    </span>
+                </li>
+    
+                <li>
+                    <a data-test-id="navbar-notification-icon" href="/notifications">
+                        <div class="relative h-6 w-6 text-notification hover:text-notification-hover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                role="img"
+                                aria-labelledby="a43x60mau2tw4soag9jr9dpez0gzmvwl a23x32wg7j3lgshlbvku4ki4lghfff5t">
+                                <title id="a43x60mau2tw4soag9jr9dpez0gzmvwl">notifications link</title>
+                                <desc id="a23x32wg7j3lgshlbvku4ki4lghfff5t">a link to the notifications page</desc>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+    
+                        </div>
+                    </a>
+                </li>
+    
+                <div class="odin-dropdown">
+                    <button class="odin-dropdown__toggle" aria-label="User Menu" data-odin-dropdown="toggle">
+                        <img class="avatar" alt="user avatar" src="https://avatars.githubusercontent.com/u/87637869?v=4"
+                            width="30" height="30">
+                    </button>
+    
+                    <ul class="odin-dropdown__menu odin-dropdown__hidden">
+                        <li class="odin-dropdown__item">
+                            <a class="accent " href="/">
+                                <img class="odin-dropdown__item-icon"
+                                    src="/assets/icons/icon-dashboard-b81c030446a01528099ff185f7fb7d0beb609410ae5d543f75bcf093f08eea53.svg">
+                                Dashboard
+                            </a>
+                        </li>
+    
+                        <li class="odin-dropdown__item">
+                            <a class="accent " href="/users/edit">
+                                <img class="odin-dropdown__item-icon"
+                                    src="/assets/icons/icon-settings-3b67a0d12637f4152cdee109d7aef38f373138ef17c0a89a0ef8a6f7c1746207.svg">
+                                Settings
+                            </a>
+                        </li>
+    
+                        <li class="odin-dropdown__item">
+                            <a class="accent" href="/logout">
+                                <img class="odin-dropdown__item-icon"
+                                    src="/assets/icons/icon-logout-06f14c53fcb271ed618bcc723113dccdbf2be9a2116148f9cf43a9ea1151b33f.svg">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </ul>
+    
+        </nav>
+    </div>
+</body>
+</html>

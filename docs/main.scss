@@ -1,0 +1,83 @@
+@use './grid.css';
+
+$main-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 
+$lg-width: 1140px;
+$gold-color: #cc9543;
+$teal-color: #6abfc3;
+$gray-bg: #f3f3f3;
+$primary: #247bfc;
+$secondary: #6c757d;
+$success: #28a745;
+$warning: #ffc12c;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #fff;
+$black: #000;
+$gold: #cc9543;
+
+$grid-columns: 12;
+$column-width: 65px;
+$gutter-width: 30px;
+$width-100:100%;
+
+%button-style {
+    height: 50px;
+    width: 220px;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.296);
+}
+
+%d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+%p-text {
+    font-size: 1.1em;
+    line-height: 2;
+}
+%nav-item {
+    color: $secondary;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+body{
+    font-family: $main-font-family;
+}
+
+.justify-center{
+    @extend %d-flex;
+    justify-content: center;
+}
+
+.justify-end{
+    @extend %d-flex;
+    justify-content: end;
+}
+
+.align-flex-center{
+    @extend %d-flex;
+    justify-content: center;
+}
+
+.navbar {
+    max-width: $lg-width;
+    height: 90px;
+    padding: 0 1.5em;
+    margin-bottom: 50px;
+}
+
+.logo-text {
+    margin-left: 15px;
+
+    color: $gold-color;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
+    letter-spacing: 0.1px;
+}
