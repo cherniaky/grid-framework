@@ -540,3 +540,77 @@ body {
     font-size: 24px;
     color: $secondary;
 }
+
+footer {
+    background-color: #fff;
+    padding: 0;
+    text-align: center;
+    font-size: 1em;
+    min-height: 277px;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+}
+footer .footer-brand {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+.footer-links-container {
+    display: flex;
+    width: 130px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-link {
+    flex-basis: 30px;
+    color: rgba(74,74,74,0.7);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0;
+}
+.footer-link:hover{
+     color: rgba(15, 15, 15, 0.7);
+}
+.footer-logo-text a{
+    text-decoration: none;
+}
+@media (max-width: 760px) {
+   footer .footer-brand{
+        display: none;
+    }
+}
+.button:hover {
+    cursor: pointer;
+ opacity: 0.8;
+}
+.submissions__add:hover{
+
+    cursor: pointer;
+ opacity: 0.8;
+}
+.lesson-content__panel a:hover{
+    color: black;
+    text-decoration: none;
+}
+.submissions__button:hover{
+    color: black;
+}
+.submissions__view-more a:hover{
+    color: black;
+    text-decoration: none;
+}
+.lesson-functions__edit-lesson-link:hover{
+    color: black;
+    fill: black;
+}
