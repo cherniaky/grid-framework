@@ -1,7 +1,7 @@
-@use './grid.css';
+@use "./grid.css";
 
-$main-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 
+$main-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 $lg-width: 1140px;
 $gold-color: #cc9543;
 $teal-color: #6abfc3;
@@ -20,64 +20,523 @@ $gold: #cc9543;
 $grid-columns: 12;
 $column-width: 65px;
 $gutter-width: 30px;
-$width-100:100%;
+$width-100: 100%;
 
-%button-style {
-    height: 50px;
-    width: 220px;
-    color: white;
-    font-size: 1em;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.296);
-}
-
-%d-flex {
+.d-flex {
     display: flex;
-    flex-wrap: wrap;
 }
 
-%p-text {
-    font-size: 1.1em;
-    line-height: 2;
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
 }
-%nav-item {
-    color: $secondary;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-body{
+body {
     font-family: $main-font-family;
 }
 
-.justify-center{
-    @extend %d-flex;
+.justify-center {
+    display: flex;
     justify-content: center;
 }
-
-.justify-end{
-    @extend %d-flex;
+.justify-spacebet {
+    display: flex;
+    justify-content: space-between;
+}
+.justify-spacearound {
+    display: flex;
+    justify-content: space-around;
+}
+.justify-end {
+    display: flex;
     justify-content: end;
 }
 
-.align-flex-center{
-    @extend %d-flex;
-    justify-content: center;
+.align-flex-center {
+    display: flex;
+    align-items: center;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+.text-grey {
+    color: $secondary;
+}
+.active {
+    font-weight: bold;
+    color: black;
+}
+
+// *{
+//      box-sizing: border-box;
+// }
+// nav-bar
+.logo-text {
+    color: $gold-color;
+    font-family: "Amatic SC", cursive;
+    font-size: 32px;
+    display: inline;
+    text-decoration: none;
+}
+
+.logo__img {
+    height: 70px;
 }
 
 .navbar {
-    max-width: $lg-width;
-    height: 90px;
-    padding: 0 1.5em;
+    height: 95.2px;
     margin-bottom: 50px;
+    padding: 0 168px;
+}
+.navbar-brand {
+    display: flex;
 }
 
-.logo-text {
-    margin-left: 15px;
+.navbar-notification-icon {
+    padding: 0 8px;
+    border-left: 2px solid gray;
+    cursor: pointer;
+    color: gray;
+    width: 24px;
+    height: 24px;
+}
+.navbar-notification-icon:hover {
+    color: rgb(95, 94, 94);
+}
+.nav-item a {
+    font-size: 16px;
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;
+}
+.nav-item a:hover {
+    color: rgb(95, 94, 94);
+}
+.avatar {
+    border-radius: 50%;
+}
+.burger-menu {
+    display: none;
+}
+@media (max-width: 1020px) {
+    .navbar {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 760px) {
+    .logo-text {
+        font-size: 24px;
+    }
 
+    .logo__img {
+        height: 60px;
+    }
+
+    .collapse {
+        display: none;
+    }
+    .burger-menu {
+        display: inline;
+    }
+    .burger-menu svg {
+        fill: rgb(160, 198, 211);
+    }
+}
+// main content
+
+//header
+.main-circle {
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 5px 16px 0 rgb(153, 153, 153);
+}
+.progress-circle__image {
+    transition: 0.2s;
+    opacity: 1;
+}
+.main-circle:hover .progress-circle__image {
+    opacity: 0;
+}
+.main-circle:hover .on-hover-info {
+    opacity: 0.8;
+}
+.on-hover-info {
+    text-align: center;
+    font-size: 14px;
+    top: 30%;
+    left: 6%;
+    position: absolute;
+    color: grey;
+    opacity: 0.8;
+    opacity: 0;
+
+    transition: 0.2s;
+}
+.percents {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.banner__title {
+    text-align: center;
+    font-size: 36px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    color: $secondary;
+    margin: 20px 69px 24px;
+}
+.lesson-header__title {
+    text-align: center;
     color: $gold-color;
-    font-family: 'Amatic SC', cursive;
-    font-size: 2.5em;
-    letter-spacing: 0.1px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+// side nav
+.side-nav {
+    padding: 6px 4% 0;
+    min-width: max-content;
+    height: max-content;
+    text-align: left;
+}
+.lesson-navigation__item {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.lesson-navigation__link {
+    text-align: left;
+}
+
+.lesson-navigation__circle {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: $secondary;
+}
+
+.active-circle {
+    background-color: black;
+}
+
+@media (max-width: 950px) {
+    .side-nav {
+        display: none;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+// main-content
+.lesson-content {
+    max-width: 50%;
+}
+#introduction p {
+    font-size: 19px;
+    color: $secondary;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+#assignment p {
+    font-size: 19px;
+    color: $secondary;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.internal-link {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.lesson-content__panel {
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 24px;
+    border-radius: 10px;
+    font-size: 19px;
+    margin-bottom: 50px;
+}
+.lesson-content__panel ol {
+    line-height: 1.9;
+    padding-left: 20px;
+    list-style: decimal;
+    margin-bottom: 20px;
+}
+.lesson-content__panel a {
+    color: $gold-color;
+}
+.lesson-content__panel li {
+    margin: 15px 0;
+    color: $secondary;
+}
+#applying-the-framework {
+    margin-top: 50px;
+    font-weight: bold;
+}
+#additional-resources {
+    margin-bottom: 50px;
+}
+#additional-resources p {
+    font-size: 19px;
+    color: $secondary;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+#additional-resources ul {
+    color: $secondary;
+    font-size: 18px;
+    list-style: disc;
+    margin-left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .lesson-content {
+        max-width: 65%;
+    }
+}
+@media (max-width: 950px) {
+    .lesson-content {
+        max-width: 80%;
+    }
+}
+// examples
+.lesson-functions {
+    background-color: #eeeeee;
+}
+
+.card-main {
+    margin-top: 50px;
+    display: block;
+    background-color: #fff;
+    padding: 40px 60px;
+    position: relative;
+    box-shadow: 0px 15px 30px rgb(167, 167, 167);
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-bottom: 60px;
+     max-width: 80%;
+}
+
+.submissions__header {
+    margin-bottom: 24px;
+}
+.submissions__title {
+    font-size: 40px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+.submissions__project-title {
+    font-size: 24px;
+    color: rgba(74, 74, 74, 0.7);
+}
+.submissions__add {
+    margin-left: 10px;
+    padding: 16px 56px;
+    width: 201px;
+    background-color: #6abfc3;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0.05em 0.25em 0 rgb(95, 95, 95);
+}
+.submissions__item {
+    border-top: 1px solid rgb(211, 210, 210);
+    padding: 16px 0;
+    box-sizing: border-box;
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submissions__left-container {
+    display: flex;
+    align-items: center;
+}
+.submissions__flag {
+    display: none;
+}
+.react-modal--hidden {
+    display: none;
+}
+.submissions__like {
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    color: #d8d8d8;
+}
+.submissions__submission-title {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #8f8f8f;
+    font-weight: bold;
+}
+.submissions__button {
+    min-height: 40px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #686868;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 16px;
+    background-color: #d8d8d8;
+    border-radius: 4px;
+}
+.submissions__like {
+    display: flex;
+    align-items: center;
+}
+.fa-heart svg {
+    margin-left: 2px;
+    width: 16px;
+}
+.submissions-list-container {
+    display: flex;
+    flex-direction: column;
+}
+.submissions__view-more {
+    align-self: center;
+    padding: 24px 0;
+    font-size: 18px;
+    color: #a4a4a4;
+}
+.submissions__view-more a {
+    color: $gold-color;
+}
+.lesson-button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.lesson-button-group__item {
+     box-sizing: border-box;
+    margin: 0 20px;
+    padding: 16px 56px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0.05em 0.25em 0 rgb(95, 95, 95);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.lesson-button {
+    background-color: $gold-color;
+}
+.complete-button {
+    background-color: #6abfc3;
+}
+@media (max-width: 1050px) {
+    .lesson-button-group {
+        flex-direction: column;
+        text-align: center;
+    }
+    .lesson-button-group__item {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 760px) {
+    .submissions__header {
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+    }
+    .submissions__title {
+        text-align: center;
+    }
+    .submissions__project-title {
+        text-align: center;
+    }
+    .submissions__course {
+        margin-bottom: 20px;
+    }
+    .submissions__item {
+        flex-direction: column;
+        height: max-content;
+    }
+    .submissions__view-more {
+        text-align: center;
+    }
+    .submissions__actions {
+        margin: 10px 0;
+    }
+    .submissions__left-container {
+        margin-bottom: 10px;
+    }
+    .card-main {
+        width: 60%;
+    }
+}
+@media (max-width: 500px) {
+    .submissions__actions{
+        display: flex;
+        flex-direction: column;
+    }
+    .submissions__button{
+        margin: 10px 0;
+        height: min-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.lesson-functions__edit-lesson-link{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: $gold-color;
+    text-decoration: none;
+}
+.github-icon{
+    fill: $gold-color;
+    margin-right: 10px;
+}
+.bottom-cta{
+    width: 100%;
+     color: $secondary;
+    box-sizing: border-box;
+    min-height: max-content;
+    padding: 80px 40px;
+    text-align: center;
+}
+.bottom-cta__heading{
+    margin-bottom: 16px;
+    font-size: 35.2px;
+   
+}
+.bottom-cta__sub-heading{
+    margin-bottom: 55px;
+    font-size: 18px;
+}
+// adverb
+.advert{
+    max-width: 80%;
+    margin: 0 0 60px;
+    padding: 40px 60px;
+}
+.advert__header{
+    margin-bottom: 30px ;
+}
+.advert__body{
+    border-top: 2px solid rgb(216, 216, 216);
+}
+.ad{
+    margin-right: 0;
+    width: max-content;
+    word-wrap:normal;
+}
+.advert__pitch{
+    font-size: 24px;
+    color: $secondary;
 }

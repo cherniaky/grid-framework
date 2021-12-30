@@ -1,4 +1,4 @@
-@import 'reset';
+
 
 $grid-columns:12;
 
@@ -15,3 +15,29 @@ $grid-columns:12;
   }
 }
 
+@for $i from 1 to 36 {
+  .font-size-#{$i}{
+    font-size: #{$i}px;
+  }
+}
+
+@for $i from 1 to 50 {
+  .mar-bot-#{$i}{
+  margin-bottom: #{$i}px;  
+  }
+}
+@for $i from 1 to 50 {
+  .mar-top-#{$i}{
+  margin-top: #{$i}px;  
+  }
+}
+@for $i from 1 to 50 {
+  .mar-left-#{$i}{
+  margin-left: #{$i}px;  
+  }
+}
+@for $i from 1 to 50 {
+  .mar-right-#{$i}{
+  margin-right: #{$i}px;  
+  }
+}

@@ -1,103 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="main.css">
     <title>The Odin Project</title>
 </head>
-<body>
-    <div class="navbar navbar-expand-md navbar-light">
-        <div class="navbar-brand">
-            <a class="logo" href="/">
-                <img alt="Odin Logo" class="logo__img"
-                    src="../assets/odin-logo.svg">
+
+<body class="container">
+
+
+    <div class="navbar align-flex-center column-12 justify-spacebet">
+
+
+        <div class="navbar-brand d-flex">
+            <span class="logo align-flex-center" href="/">
+                <img alt="Odin Logo" class="logo__img" src="../assets/odin-logo.svg">
                 <div class="logo-text"> The Odin Project </div>
-            </a>
+            </span>
         </div>
-    
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="modal"
-            data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false"
-            aria-label="toggle-navigation">
-            <span class="navbar-toggler-icon open"></span>
-            <span class="sr-only">Open navigation</span>
-        </button>
-    
-        <nav class="collapse navbar-collapse">
-            <!-- Full Width Navbar -->
-            <ul class="navbar-nav ml-auto hidden-md-down">
+
+
+
+        <nav class="collapse navbar-collapse ">
+
+            <ul class="navbar-nav ml-auto hidden-md-down d-flex align-flex-center">
                 <li class="nav-item ">
                     <a class="nav-link" href="https://www.theodinproject.com/paths/full-stack-javascript">My Path</a>
                 </li>
-    
+
                 <li class="nav-item ">
                     <a class="nav-link" href="https://www.theodinproject.com/paths">All Paths</a>
                 </li>
-    
+
                 <li class="nav-item ">
-                    <a class="nav-link" target="_blank" rel="noreferrer" href="https://discord.gg/fbFCkYabZB">Community</a>
+                    <a class="nav-link" target="_blank" rel="noreferrer"
+                        href="https://discord.gg/fbFCkYabZB">Community</a>
                 </li>
-    
+
                 <li class="nav-link">
                     <span class="divider">
                     </span>
                 </li>
-    
+
                 <li>
-                    <a data-test-id="navbar-notification-icon" href="/notifications">
-                        <div class="relative h-6 w-6 text-notification hover:text-notification-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                role="img"
-                                aria-labelledby="a43x60mau2tw4soag9jr9dpez0gzmvwl a23x32wg7j3lgshlbvku4ki4lghfff5t">
-                                <title id="a43x60mau2tw4soag9jr9dpez0gzmvwl">notifications link</title>
-                                <desc id="a23x32wg7j3lgshlbvku4ki4lghfff5t">a link to the notifications page</desc>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
-                                </path>
-                            </svg>
-    
-                        </div>
-                    </a>
+
+                    <svg class="navbar-notification-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" role="img"
+                        aria-labelledby="a43x60mau2tw4soag9jr9dpez0gzmvwl a23x32wg7j3lgshlbvku4ki4lghfff5t">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                        </path>
+                    </svg>
+
+
+
                 </li>
-    
-                <div class="odin-dropdown">
-                    <button class="odin-dropdown__toggle" aria-label="User Menu" data-odin-dropdown="toggle">
-                        <img class="avatar" alt="user avatar" src="https://avatars.githubusercontent.com/u/87637869?v=4"
-                            width="30" height="30">
-                    </button>
-    
-                    <ul class="odin-dropdown__menu odin-dropdown__hidden">
-                        <li class="odin-dropdown__item">
-                            <a class="accent " href="/">
-                                <img class="odin-dropdown__item-icon"
-                                    src="/assets/icons/icon-dashboard-b81c030446a01528099ff185f7fb7d0beb609410ae5d543f75bcf093f08eea53.svg">
-                                Dashboard
-                            </a>
-                        </li>
-    
-                        <li class="odin-dropdown__item">
-                            <a class="accent " href="/users/edit">
-                                <img class="odin-dropdown__item-icon"
-                                    src="/assets/icons/icon-settings-3b67a0d12637f4152cdee109d7aef38f373138ef17c0a89a0ef8a6f7c1746207.svg">
-                                Settings
-                            </a>
-                        </li>
-    
-                        <li class="odin-dropdown__item">
-                            <a class="accent" href="/logout">
-                                <img class="odin-dropdown__item-icon"
-                                    src="/assets/icons/icon-logout-06f14c53fcb271ed618bcc723113dccdbf2be9a2116148f9cf43a9ea1151b33f.svg">
-                                Log out
-                            </a>
-                        </li>
+                <img class="avatar" alt="user avatar" src="https://avatars.githubusercontent.com/u/87637869?v=4"
+                    width="30" height="30">
+
+
+            </ul>
+
+        </nav>
+        <div class="burger-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24" style="">
+                <path
+                    d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z">
+                </path>
+            </svg>
+        </div>
+    </div>
+
+
+    <div class="column-12 main-content-container">
+        <header class="page-header mar-bot-40 d-flex-column align-flex-center">
+            <div class="main-circle">
+                <img alt="HTML and CSS badge" class="progress-circle__image"
+                    src="https://www.theodinproject.com/assets/badges/badge-html-borderless-f3af8310e14b87da7bf629edf1893091a025b4946cbc9e169613a02c24a10d6f.svg" />
+                <div class="on-hover-info">
+                    <p class="percents"> 94%</p>
+                    <p>COMPLETE</p>
+                </div>
+
+            </div>
+            <p class="banner__title" data-test-id="course-title-header">HTML and CSS</p>
+            <h2 class="lesson-header__title accent" data-test-id="lesson-title-header">Project: Design Your Own
+                Grid-Based Framework
+            </h2>
+        </header>
+
+        <div class="d-flex main-content">
+            <aside
+                class="side-nav text-grey font-size-13 text-upper d-flex-column align-flex-center justify-spacearound">
+                <div class="lesson-navigation__item d-flex">
+                    <span class="lesson-navigation__circle active-circle "></span>
+                    <div class="lesson-navigation__title">
+                        <p class="lesson-navigation__link grey active" href="#introduction">Introduction</p>
+                    </div>
+                </div>
+                <div class="lesson-navigation__item d-flex">
+                    <div class="lesson-navigation__circle"></div>
+                    <div class="lesson-navigation__title">
+                        <p class="lesson-navigation__link grey" href="#assignment">Assignment</p>
+                    </div>
+                </div>
+                <div class="lesson-navigation__item d-flex">
+                    <div class="lesson-navigation__circle"></div>
+                    <div class="lesson-navigation__title">
+                        <p class="lesson-navigation__link grey" href="#additional-resources">Additional Resources</p>
+                    </div>
+                </div>
+
+            </aside>
+
+            <section class="lesson-content d-flex-column">
+
+                <div id="introduction" class="scrollspy">
+                    <h3>
+                        <h3 class="internal-link">Introduction</h3>
+                    </h3>
+                    <p>In this final project, you’ll get to take everything you’ve learned and use it to build your own
+                        simple
+                        grid-based framework. As with the other final projects, we’ll keep it relatively open-ended to
+                        give you a
+                        chance to exercise your creativity and problem-solving skills. It will be a great project to
+                        show off to
+                        potential employers as well.</p>
+                    <p>Once you’re done setting up your framework, you will use it to clone any website you like. If
+                        you’re out of
+                        ideas, try cloning The Odin Project!</p>
+                </div>
+
+
+
+
+
+                <div id="assignment" class="scrollspy">
+                    <h3>
+                        <h3 class="internal-link">Assignment</h3>
+                    </h3>
+                    <p>You’ll be creating your own grid-based framework.</p>
+                    <div class="lesson-content__panel">
+                        <ol>
+                            <li>Follow the instructions atop the <a href="/courses/foundations/lessons/recipes">Recipes
+                                    project</a>
+                                to set up a GitHub repository for this project (of course you’ll need to change the
+                                title).</li>
+                            <li>Create a new CSS document.</li>
+                            <li>Think about the major elements that are required of a framework. This includes a CSS
+                                reset, a fixed
+                                number of grids separated by “gutters”, a way to make new rows, and default values for
+                                the font
+                                properties of elements.</li>
+                            <li>Write the CSS necessary to create a basic 12-column grid framework. Check out the <a
+                                    href="http://960.gs" target="_blank" rel="noreferrer">960 Grid System
+                                    documentation</a> for a
+                                look at how they do it. The complexity is up to you – there’s no need to go too crazy
+                                with details
+                                (you’re not trying to rebuild Bootstrap).</li>
+                            <li>Push your framework to GitHub.</li>
+                        </ol>
+
+                        <h4 id="applying-the-framework">Applying the Framework</h4>
+
+                        <ol>
+                            <li>Create a new HTML document and a new GitHub repository.</li>
+                            <li>Identify the webpage you’d like to clone and break it down into its major elements like
+                                we have in
+                                the previous projects.</li>
+                            <li>Add your framework to your project.</li>
+                            <li>Use your framework to lay out the structure of the page.</li>
+                            <li>Fill in the necessary details/images etc.</li>
+                            <li>Push your solution to GitHub.</li>
+                            <li>Have a frosty beverage, you’re done with the HTML/CSS projects!</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+
+
+                <div id="additional-resources" class="scrollspy">
+                    <h3>
+                        <h3 class="internal-link">Additional Resources</h3>
+                    </h3>
+                    <p>This section contains helpful links to other content. It isn’t required, so consider it
+                        supplemental.</p>
+                    <ul>
+                        <li>Add some!</li>
                     </ul>
                 </div>
-    
-            </ul>
-    
-        </nav>
+
+            </section>
+        </div>
     </div>
+
+
+    <div class="column-12 lesson-functions d-flex-column align-flex-center">
+
+        <div class="card-main">
+
+
+            <div class="submissions">
+                <div class="submissions__header d-flex">
+                    <div class="submissions__course">
+                        <h3 class="submissions__title">Solutions:</h3>
+                        <h4 data-test-id="course-lesson-title" class="submissions__project-title">HTML and CSS:
+                            (Design Your Own Grid-Based Framework)</h4>
+                    </div>
+
+                    <button type="button" class="submissions__add">Add Solution</button>
+                </div>
+                <div class="submissions-list-container">
+                    <div class="submissions-list">
+
+                        <div class="submissions__item" data-test-id="submission-item">
+
+                            <div class="submissions__left-container d-flex">
+                                <button class="link-button submissions__like hint--top">
+                                    <span>
+                                        10
+                                    </span>
+                                    <i class="fa-heart" aria-label="Like icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+                                           >
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </button>
+                                <p class="submissions__submission-title">Zack-Mks</p>
+                            </div>
+
+                            <div class="submissions__actions"><a href="https://github.com/Zakarya-Mks/sassy-grid"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View Code</a>
+                                <a href="https://zakarya-mks.github.io/sassy-grid/" target="_blank" rel="noreferrer"
+                                    class="submissions__button" data-test-id="live-preview-btn">Live Preview</a>
+                                <button class="link-button submissions__flag hint--top" aria-label="Report submission"
+                                    type="button" data-test-id="flag-btn"><i class="fas fa-flag"></i></button>
+                            </div>
+
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">5</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">dcoates83</p>
+                            </div>
+                            <div class="submissions__actions"><a href="https://github.com/dcoates83/Code-Wars"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View Code</a><a
+                                    href="https://dcoates83.github.io/Code-Wars/" target="_blank" rel="noreferrer"
+                                    class="submissions__button" data-test-id="live-preview-btn">Live
+                                    Preview</a><button class="link-button submissions__flag hint--top"
+                                    aria-label="Report submission" type="button" data-test-id="flag-btn"><i
+                                        class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">5</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">Captain Usopp</p>
+                            </div>
+                            <div class="submissions__actions"><a href="https://github.com/Captain-Usopp/microsoft-clone"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View
+                                    Code</a><a href="https://captain-usopp.github.io/microsoft-clone/" target="_blank"
+                                    rel="noreferrer" class="submissions__button" data-test-id="live-preview-btn">Live
+                                    Preview</a><button class="link-button submissions__flag hint--top"
+                                    aria-label="Report submission" type="button" data-test-id="flag-btn"><i
+                                        class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">4</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">Alex</p>
+                            </div>
+                            <div class="submissions__actions"><a
+                                    href="https://github.com/alex-lvl/grid-framework#simple-grid-framework"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View Code</a><a
+                                    href="https://alex-lvl.github.io/grid-framework/" target="_blank" rel="noreferrer"
+                                    class="submissions__button" data-test-id="live-preview-btn">Live Preview</a><button
+                                    class="link-button submissions__flag hint--top" aria-label="Report submission"
+                                    type="button" data-test-id="flag-btn"><i class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">3</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">hackerman</p>
+                            </div>
+                            <div class="submissions__actions"><a href="https://github.com/nsars19/odin_clone"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View Code</a><a
+                                    href="https://nsars19.github.io/odin_clone/" target="_blank" rel="noreferrer"
+                                    class="submissions__button" data-test-id="live-preview-btn">Live
+                                    Preview</a><button class="link-button submissions__flag hint--top"
+                                    aria-label="Report submission" type="button" data-test-id="flag-btn"><i
+                                        class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">1</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">icefire587</p>
+                            </div>
+                            <div class="submissions__actions"><a
+                                    href="https://github.com/samgliu/css-framework-grid-based" target="_blank"
+                                    rel="noreferrer" class="submissions__button" data-test-id="view-code-btn">View
+                                    Code</a><a href="https://samgliu.github.io/css-framework-grid-based/"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="live-preview-btn">Live Preview</a><button
+                                    class="link-button submissions__flag hint--top" aria-label="Report submission"
+                                    type="button" data-test-id="flag-btn"><i class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">1</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">Ionut Ianchis</p>
+                            </div>
+                            <div class="submissions__actions"><a href="https://github.com/Jonthejon10/microsoft-clone"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View
+                                    Code</a><a href="https://jonthejon10.github.io/microsoft-clone/" target="_blank"
+                                    rel="noreferrer" class="submissions__button" data-test-id="live-preview-btn">Live
+                                    Preview</a><button class="link-button submissions__flag hint--top"
+                                    aria-label="Report submission" type="button" data-test-id="flag-btn"><i
+                                        class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">1</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">SamuelV1</p>
+                            </div>
+                            <div class="submissions__actions"><a href="https://github.com/SamuelV1/OdinClone"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="view-code-btn">View Code</a><a
+                                    href="https://samuelv1.github.io/OdinClone/" target="_blank" rel="noreferrer"
+                                    class="submissions__button" data-test-id="live-preview-btn">Live
+                                    Preview</a><button class="link-button submissions__flag hint--top"
+                                    aria-label="Report submission" type="button" data-test-id="flag-btn"><i
+                                        class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">1</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">diegoromerodev</p>
+                            </div>
+                            <div class="submissions__actions"><a
+                                    href="https://github.com/diegoromerodev/960px-custom-framework" target="_blank"
+                                    rel="noreferrer" class="submissions__button" data-test-id="view-code-btn">View
+                                    Code</a><a href="https://diegoromerodev.github.io/960px-custom-framework/"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="live-preview-btn">Live Preview</a><button
+                                    class="link-button submissions__flag hint--top" aria-label="Report submission"
+                                    type="button" data-test-id="flag-btn"><i class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                        <div class="submissions__item" data-test-id="submission-item">
+                            <div class="submissions__left-container"><button
+                                    class="link-button submissions__like hint--top" type="button"
+                                    aria-label="Like submission" data-test-id="like-btn"><span
+                                        data-test-id="number-of-likes">1</span> <i class="fa fa-heart"
+                                        aria-label="Like icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#cccccc">
+                                                    <path
+                                                        d="M86,162.71469l-2.20375,-1.8275c-4.17906,-3.49375 -9.83625,-7.28312 -16.39375,-11.66375c-25.54469,-17.10594 -60.5225,-40.51406 -60.5225,-80.42344c0,-24.65781 20.06219,-44.72 44.72,-44.72c13.39719,0 25.94781,5.96625 34.4,16.16531c8.45219,-10.19906 21.00281,-16.16531 34.4,-16.16531c24.65781,0 44.72,20.06219 44.72,44.72c0,39.90938 -34.97781,63.3175 -60.5225,80.42344c-6.5575,4.38063 -12.21469,8.17 -16.39375,11.66375z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></i></button>
+                                <p class="submissions__submission-title">Agustin Gramajo</p>
+                            </div>
+                            <div class="submissions__actions"><a
+                                    href="https://github.com/Agustingrm/TheOdinProject-GridTemplate" target="_blank"
+                                    rel="noreferrer" class="submissions__button" data-test-id="view-code-btn">View
+                                    Code</a><a href="https://agustingrm.github.io/TheOdinProject-GridTemplate/"
+                                    target="_blank" rel="noreferrer" class="submissions__button"
+                                    data-test-id="live-preview-btn">Live Preview</a><button
+                                    class="link-button submissions__flag hint--top" aria-label="Report submission"
+                                    type="button" data-test-id="flag-btn"><i class="fas fa-flag"></i></button></div>
+                            <div class="react-modal--hidden" aria-label="modal--hidden">
+                                <div class="react-modal__body"><button class="link-button react-modal__close-btn"
+                                        type="button" aria-label="close"></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="submissions__view-more"><span>Showing 10 most liked submissions - </span><a
+                            data-test-id="view-all-projects-link" href=""> View full
+                            list of solutions</a></p>
+                </div>
+            </div>
+
+
+            <div class="lesson-button-group">
+                <a title="Go back to 'HTML and CSS'"
+                    class="button button--secondary lesson-button-group__item lesson-button">
+                    <i class="lesson-button__icon far fa-map"></i>View Course
+                </a>
+
+                <button data-controller="complete-button"
+                    class="button button--primary lesson-button-group__item complete-button">
+
+
+
+
+                    <span class="complete-button__text" data-complete-button-target="text">Mark Complete</span>
+
+                </button>
+
+
+
+                <a title="Move on to 'Conclusion'"
+                    class="button button--secondary lesson-button-group__item lesson-button"
+                    data-test-id="next-lesson-btn" href="">
+                    <i class="lesson-button__icon far fa-arrow-alt-circle-right" aria-hidden="true"></i>Next Lesson
+                </a>
+            </div>
+        </div>
+
+        <a target="_blank" rel="noreferrer noopener" class="lesson-functions__edit-lesson-link"
+            href="https://github.com/TheOdinProject/curriculum/edit/main/html_css/project_css_frameworks.md">
+            <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+                ">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                    stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                    <g fill="#cc9543">
+                        <path
+                            d="M78.11667,15.05c-32.96667,3.58333 -59.48333,30.1 -63.06667,62.35c-3.58333,33.68333 15.76667,63.78333 45.15,75.25c2.15,0.71667 4.3,-0.71667 4.3,-3.58333v-11.46667c0,0 -2.86667,0.71667 -6.45,0.71667c-10.03333,0 -14.33333,-8.6 -15.05,-13.61667c-0.71667,-2.86667 -2.15,-5.01667 -4.3,-7.16667c-2.15,-0.71667 -2.86667,-0.71667 -2.86667,-1.43333c0,-1.43333 2.15,-1.43333 2.86667,-1.43333c4.3,0 7.88333,5.01667 9.31667,7.16667c3.58333,5.73333 7.88333,7.16667 10.03333,7.16667c2.86667,0 5.01667,-0.71667 6.45,-1.43333c0.71667,-5.01667 2.86667,-10.03333 7.16667,-12.9c-16.48333,-3.58333 -28.66667,-12.9 -28.66667,-28.66667c0,-7.88333 3.58333,-15.76667 8.6,-21.5c-0.71667,-1.43333 -1.43333,-5.01667 -1.43333,-10.03333c0,-2.86667 0,-7.16667 2.15,-11.46667c0,0 10.03333,0 20.06667,9.31667c3.58333,-1.43333 8.6,-2.15 13.61667,-2.15c5.01667,0 10.03333,0.71667 14.33333,2.15c9.31667,-9.31667 20.06667,-9.31667 20.06667,-9.31667c1.43333,4.3 1.43333,8.6 1.43333,11.46667c0,5.73333 -0.71667,8.6 -1.43333,10.03333c5.01667,5.73333 8.6,12.9 8.6,21.5c0,15.76667 -12.18333,25.08333 -28.66667,28.66667c4.3,3.58333 7.16667,10.03333 7.16667,16.48333v18.63333c0,2.15 2.15,4.3 5.01667,3.58333c26.51667,-10.75 45.15,-36.55 45.15,-66.65c0,-43 -36.55,-76.68333 -79.55,-71.66667z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <span> Improve this lesson on GitHub</span>
+        </a>
+
+        <div class="bottom-cta">
+            <p class="bottom-cta__heading">Have a question?</p>
+
+            <p class="bottom-cta__sub-heading">Chat with our friendly Odin community in our Discord chatrooms!</p>
+            <a class="button button--secondary lesson-button-group__item lesson-button" target="_blank" rel="noreferrer"
+                href="https://discord.gg/fbFCkYabZB">Open Discord</a>
+        </div>
+
+<!-- 
+        <div class="card-main advert d-flex-column">
+            <div class="advert__header d-flex">
+                <h2 class="advert__pitch">Are you interested in accelerating your web development learning experience?
+                </h2>
+                <a href="https://www.thinkful.com/?utm_source=odin&amp;utm_medium=cpc&amp;utm_campaign=odin-homepage&amp;utm_content=web-dev-3-icons"
+                    class="button button--primary ad lesson-button-group__item complete-button">Get started</a>
+            </div>
+            <div class="advert__body">
+                <a href="https://www.thinkful.com/?utm_source=odin&amp;utm_medium=cpc&amp;utm_campaign=odin-homepage&amp;utm_content=tf-logo"
+                    alt="Thinkful" class="advert__brand-anchor ad">
+                    <div class="advert__brand">
+                        <img alt="Thinkful Logo" class="advert__logo"
+                            src="/assets/advert/thinkful-logo-b82fbfcec7075b71956a786a15683fd87df7efe335429c80b3156d5dd3b74ef5.svg">
+                        <h2 class="advert__brand-name">Thinkful</h2>
+                    </div>
+                </a>
+                <ul class="advert__icons-group">
+                    <li class="advert__icons-group-item">
+                        <img alt="5-6 months" class="advert__icon"
+                            src="/assets/advert/icon-calendar-13845c7b0b4004268fc976b15e5f4dee9a06d7b72fd962810aa0536e5f6e9806.svg">
+                        <p class="advert__icon-text">5-6 months</p>
+                    </li>
+
+                    <li class="advert__icons-group-item">
+                        <img alt="Job Guarantee" class="advert__icon"
+                            src="/assets/advert/icon-guarantee-047f6434b566fba5814aae8aa8cb7c7e3c26ad7ec996cf7b37ebebee8e78cff4.svg">
+                        <p class="advert__icon-text">Job Guarantee</p>
+                    </li>
+
+                    <li class="advert__icons-group-item">
+                        <img alt="1-on-1 Mentorship" class="advert__icon"
+                            src="/assets/advert/icon-mentor-1a98bfba6144856bdce308fe83cbfe0831429e79f5f3f6c4fb0c78153c7ab8b7.svg">
+                        <p class="advert__icon-text">1-on-1 Mentorship</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+ -->
+
+    </div>
+    <footer class="column-12" id=" footer">
+        <div class="footer-brand">
+            <a class="logo" href="/">
+                <img alt="Odin Logo" class="logo__img"
+                    src="/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg">
+                <div class="logo__text"> The Odin Project </div>
+            </a>
+        </div>
+        <div class="footer-social">
+            <a href="https://github.com/TheOdinProject"><span aria-label="github" class="accent fab fa-github"></span></a>
+            <a href="https://discord.gg/V75WSQG"><span aria-label="discord chat" class="accent fab fa-discord"></span></a>
+            <a href="https://www.facebook.com/theodinproject/"><span aria-label="facebook"
+                    class="accent fab fa-facebook"></span></a>
+            <a href="https://twitter.com/TheOdinProject"><span aria-label="twitter"
+                    class="accent fab fa-twitter"></span></a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-links-container">
+                <a class="footer-link" href="/about">About</a>
+                <a class="footer-link" href="/faq">FAQ</a>
+                <a target="_blank" rel="noreferrer" class="footer-link" href="https://medium.com/the-odin-project">Blog</a>
+            </div>
+            <div class="footer-links-container">
+                <a class="footer-link" href="/success_stories">Success Stories</a>
+                <a class="footer-link" href="/contributing">Contribute</a>
+                <a class="footer-link" href="/terms_of_use">Terms of Use</a>
+            </div>
+        </div>
+    
+    </footer>
 </body>
+
 </html>
