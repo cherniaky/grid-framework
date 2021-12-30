@@ -83,9 +83,14 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
     height: 95.2px;
     margin-bottom: 50px;
     padding: 0 168px;
+    z-index: 3;
+   
 }
 .navbar-brand {
     display: flex;
@@ -117,11 +122,20 @@ body {
 }
 .burger-menu {
     display: none;
+    margin-right: 40px;
+}
+.collapse{
+    margin-right: 240px;
 }
 @media (max-width: 1020px) {
     .navbar {
+       
         padding: 0 30px;
+       
     }
+    .collapse{
+    margin-right: 40px;
+}
 }
 @media (max-width: 760px) {
     .logo-text {
@@ -143,7 +157,9 @@ body {
     }
 }
 // main content
-
+.main-content-container{
+    margin-top: 100px;
+}
 //header
 .main-circle {
     cursor: pointer;

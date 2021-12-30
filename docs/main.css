@@ -89,9 +89,13 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: white;
   height: 95.2px;
   margin-bottom: 50px;
   padding: 0 168px;
+  z-index: 3;
 }
 
 .navbar-brand {
@@ -131,11 +135,19 @@ body {
 
 .burger-menu {
   display: none;
+  margin-right: 40px;
+}
+
+.collapse {
+  margin-right: 240px;
 }
 
 @media (max-width: 1020px) {
   .navbar {
     padding: 0 30px;
+  }
+  .collapse {
+    margin-right: 40px;
   }
 }
 
@@ -155,6 +167,10 @@ body {
   .burger-menu svg {
     fill: #a0c6d3;
   }
+}
+
+.main-content-container {
+  margin-top: 100px;
 }
 
 .main-circle {
